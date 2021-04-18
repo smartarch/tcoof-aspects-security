@@ -26,7 +26,7 @@ case class AspectAllowActionForSubjectAndObject(subj: Component, action: String,
 
 import scala.reflect.runtime.universe._
 
-class EnsembleAspect {
+class AccessControlAdaptationAspect {
 
   val availableActions = Set("enter", "use", "read.personalData.phoneNo", "read.distanceToWorkPlace", "read.personalData")
 
@@ -185,7 +185,7 @@ class EnsembleAspect {
 
 }
 
-class EnsembleAspectProcessor(aspects: scala.collection.mutable.ListBuffer[EnsembleAspect]) {
+class EnsembleAspectProcessor(aspects: scala.collection.mutable.ListBuffer[AccessControlAdaptationAspect]) {
 
   def process(ensembleActions: ListBuffer[Action]): ListBuffer[Action] = {
 

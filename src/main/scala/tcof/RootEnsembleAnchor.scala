@@ -2,7 +2,7 @@ package tcof
 
 
 class RootEnsembleAnchor[EnsembleType <: RootEnsemble] private[tcof](
-    val builder: () => EnsembleType, aspects: scala.collection.mutable.ListBuffer[EnsembleAspect]) {
+    val builder: () => EnsembleType, aspects: scala.collection.mutable.ListBuffer[AccessControlAdaptationAspect]) {
 
   private var _solution: EnsembleType = _
 

@@ -333,7 +333,7 @@ class TestScenario(scenarioParams: TestScenarioSpec) extends Model with ModelGen
 
   val factoryTeams = factoriesMap.values.map(factory => root(new FactoryTeam(factory)))
 
-  object Pattern1a extends EnsembleAspect {
+  object Pattern1a extends AccessControlAdaptationAspect {
 
     override type SubjectType = Worker
     override type ObjectType = Component
@@ -351,7 +351,7 @@ class TestScenario(scenarioParams: TestScenarioSpec) extends Model with ModelGen
     }
   }
 
-  object Pattern1b extends EnsembleAspect {
+  object Pattern1b extends AccessControlAdaptationAspect {
 
     override type SubjectType = Worker
     override type ObjectType =  Component
@@ -369,7 +369,7 @@ class TestScenario(scenarioParams: TestScenarioSpec) extends Model with ModelGen
 
   }
 
-  object Pattern2a extends EnsembleAspect {
+  object Pattern2a extends AccessControlAdaptationAspect {
 
     override type SubjectType = Worker
     override type ObjectType =  Component
@@ -387,7 +387,7 @@ class TestScenario(scenarioParams: TestScenarioSpec) extends Model with ModelGen
 
   }
 
-  object Pattern2b extends EnsembleAspect {
+  object Pattern2b extends AccessControlAdaptationAspect {
 
     override type SubjectType = Worker
     override type ObjectType =  Component
@@ -407,7 +407,7 @@ class TestScenario(scenarioParams: TestScenarioSpec) extends Model with ModelGen
 
   }
 
-  object Pattern3 extends EnsembleAspect {
+  object Pattern3 extends AccessControlAdaptationAspect {
 
     override type SubjectType = Worker
     override type ObjectType = Component
